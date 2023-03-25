@@ -23,11 +23,14 @@ typedef struct s_game
 
 // ---------------------------------------
 void	ft_game(t_opt opt);
+// ---------------------------------------
 void	ft_rules(t_opt opt);
+// ---------------------------------------
 void	ft_options(t_opt *opt);
 void	ft_set_range(int *max, int *min);
 void	ft_set_att_limit(int *n);
-//utils ----------------------------------
+// ---------------------------------------
 int		ft_err_check(char *str);
+// ---------------------------------------
 
 #endif
