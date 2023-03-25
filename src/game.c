@@ -20,11 +20,11 @@ void	ft_game(t_opt opt)
 	int			n;
 	int			att;
 
-	ft_printf("GAME ON!\n");
 	str = NULL;
 	att = 0;
 	srand(time(0));
 	n = rand() % (opt.max + 1 - opt.min) + opt.min;
+	ft_printf("GAME ON!\n");
 	while (1)
 	{
 		att++;
