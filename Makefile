@@ -22,7 +22,7 @@ SRC = src/main.c \
 	src/options.c \
 	src/range.c \
 	src/att_limit.c \
-	src/utils.c
+	src/err_check.c
 
 FLAGS = -Wall -Werror -Wextra -g
 

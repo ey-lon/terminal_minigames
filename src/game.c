@@ -36,7 +36,7 @@ void	ft_game(t_opt opt)
 		str = get_next_line(0);
 		if (!ft_strncmp("exit\n", str, 5))
 			game.status = (ft_printf("You gave up!\n") * 0 - 1);
-		else if (ft_digits_check(str))
+		else if (!ft_err_check(str))
 		{
 			game.att++;
 			game.status = ft_status_update(game.n, ft_atoi(str), game.att);

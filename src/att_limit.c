@@ -33,7 +33,7 @@ void	ft_set_att_limit(int *n)
 		str = get_next_line(0);
 		if (!ft_strncmp("exit\n", str, 5))
 			check = -1;
-		else if (ft_digits_check(str))
+		else if (!ft_err_check(str))
 		{
 			*n = ft_atoi(str);
 			check = 1;

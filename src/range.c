@@ -21,7 +21,7 @@ int	ft_set_min(int *min)
 		str = get_next_line(0);
 		if (!ft_strncmp("exit\n", str, 5))
 			check = -1;
-		else if (ft_digits_check(str) == 1)
+		else if (!ft_err_check(str))
 		{
 			*min = ft_atoi(str);
 			check = 1;
@@ -46,7 +46,7 @@ int	ft_set_max(int *max, int min)
 		str = get_next_line(0);
 		if (!ft_strncmp("exit\n", str, 5))
 			check = -1;
-		else if (ft_digits_check(str))
+		else if (!ft_err_check(str))
 		{
 			*max = ft_atoi(str);
 			if (*max > min)
