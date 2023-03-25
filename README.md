@@ -8,3 +8,8 @@ You can change the range and the number of attempts in the menu.
 | command | description |
 | ------- | ----------- |
 | `make` | compile *guess_n* |
+
+```shell
+./guess_n
+```
+To launch the game.
