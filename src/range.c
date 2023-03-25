@@ -3,62 +3,54 @@
 int	ft_set_min(int *min)
 {
 	char	*str;
+	int		check;
 
-	str = NULL;
-	while (1)
+	check = -1;
+	while (check == -1)
 	{
 		ft_printf("Insert min:\n");
-		if (str)
-			free(str);
 		str = get_next_line(0);
 		if (!ft_strncmp("exit\n", str, 5))
-		{
-			free(str);
-			return (1);
-		}
+			check = 1;
 		else if (ft_digits_check(str))
 		{
 			*min = ft_atoi(str);
-			free(str);
-			break ;
+			check = 0;
 		}
 		else
 			ft_printf("Invalid argument.\n");
+		if (str)
+			free(str);
 	}
-	return (0);
+	return (check);
 }
 
 int	ft_set_max(int *max, int min)
 {
 	char	*str;
+	int		check;
 
-	str = NULL;
-	while (1)
+	check = -1;
+	while (check == -1)
 	{
 		ft_printf("Insert max:\n");
-		if (str)
-			free(str);
 		str = get_next_line(0);
 		if (!ft_strncmp("exit\n", str, 5))
-		{
-			free(str);
-			return (1);
-		}
+			check = 1;
 		else if (ft_digits_check(str))
 		{
 			*max = ft_atoi(str);
 			if (*max > min)
-			{
-				free(str);
-				break ;
-			}
+				check = 0;
 			else
 				ft_printf("MAX must be greater than MIN (%d).\n", min);
 		}
 		else
 			ft_printf("Invalid argument.\n");
+		if (str)
+			free(str);
 	}
-	return (0);
+	return (check);
 }
 
 void	ft_set_range(int *max, int *min)

@@ -13,6 +13,13 @@ typedef struct s_opt
 	int	att_lmt;
 }	t_opt;
 
+typedef struct s_game
+{
+	int	n;
+	int	att;
+	int	status;
+}	t_game;
+
 // ---------------------------------------
 void	ft_game(t_opt opt);
 void	ft_options(t_opt *opt);
