@@ -2,11 +2,11 @@
 
 void	ft_att_limit_header(void)
 {
-	ft_printf("----------------------------\n");
-	ft_printf("|  ATTEMPTS                |\n");
-	ft_printf("|                          |\n");
-	ft_printf("|  type 'exit' to go back  |\n");
-	ft_printf("----------------------------\n");
+	ft_printf("------------------------------\n");
+	ft_printf("|  ATTEMPTS                  |\n");
+	ft_printf("|                            |\n");
+	ft_printf("|  type 'exit' to go back    |\n");
+	ft_printf("------------------------------\n");
 }
 
 void	ft_att_status(int *n)
@@ -23,28 +23,25 @@ void	ft_att_status(int *n)
 void	ft_set_att_limit(int *n)
 {
 	char	*str;
+	int		check;
 
-	str = NULL;
-	while (1)
+	ft_att_limit_header();
+	check = 0;
+	while (!check)
 	{
-		ft_att_limit_header();
 		ft_printf("Insert the maximum number of attempts:\n");
-		if (str)
-			free(str);
 		str = get_next_line(0);
 		if (!ft_strncmp("exit\n", str, 5))
-		{
-			free(str);
-			return ;
-		}
+			check = -1;
 		else if (ft_digits_check(str))
 		{
 			*n = ft_atoi(str);
-			free(str);
-			break ;
+			check = 1;
 		}
 		else
 			ft_printf("Invalid argument.\n");
+		if (str)
+			free(str);
 	}
 	ft_att_status(n);
 }

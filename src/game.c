@@ -29,12 +29,13 @@ void	ft_game(t_opt opt)
 	t_game		game;
 
 	ft_game_init(&game, opt);
+	ft_rules(opt);
 	ft_printf("GAME ON!\n");
 	while (!game.status)
 	{
 		str = get_next_line(0);
 		if (!ft_strncmp("exit\n", str, 5))
-			game.status = ft_printf("You gave up!\n") * 0 + 1;
+			game.status = (ft_printf("You gave up!\n") * 0 - 1);
 		else if (ft_digits_check(str))
 		{
 			game.att++;
@@ -43,7 +44,8 @@ void	ft_game(t_opt opt)
 		else
 			ft_printf("Invalid argument.\n");
 		if (!game.status && opt.att_lmt > 0 && game.att == opt.att_lmt)
-			game.status = ft_printf("You Lose! Too many attempts.\n") * 0 + 1;
+			game.status = (ft_printf("You Lose!\
+				\nThe number was [%d].\n", game.n) * 0 - 1);
 		if (str)
 			free(str);
 	}

@@ -18,6 +18,7 @@ LIBFT = Libft/libft.a
 
 SRC = src/main.c \
 	src/game.c \
+	src/rules.c \
 	src/options.c \
 	src/range.c \
 	src/att_limit.c \
