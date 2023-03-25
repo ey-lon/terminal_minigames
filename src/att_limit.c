@@ -1,6 +1,6 @@
 #include "guess_n.h"
 
-void	ft_att_limit_header(void)
+void	ft_attempts_header(void)
 {
 	ft_printf("------------------------------\n");
 	ft_printf("|  ATTEMPTS                  |\n");
@@ -20,12 +20,12 @@ void	ft_att_status(int *n)
 	}
 }
 
-void	ft_set_att_limit(int *n)
+void	ft_set_attempts(int *n)
 {
 	char	*str;
 	int		check;
 
-	ft_att_limit_header();
+	ft_attempts_header();
 	check = 0;
 	while (!check)
 	{

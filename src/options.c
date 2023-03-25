@@ -27,7 +27,7 @@ void	ft_options(t_opt *opt)
 		else if (!ft_strncmp("1\n", str, 2))
 			ft_set_range(&(opt->max), &(opt->min));
 		else if (!ft_strncmp("2\n", str, 2))
-			ft_set_att_limit(&(opt->att_lmt));
+			ft_set_attempts(&(opt->att_lmt));
 		else
 			ft_printf("Unknown command.\n");
 		if (str)
