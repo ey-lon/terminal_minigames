@@ -15,7 +15,7 @@ int	ft_status_update(int n, int nbr, int att)
 	return (0);
 }
 
-void	ft_game_init(t_game *game)
+void	ft_game_init(t_game *game, t_opt opt)
 {
 	srand(time(0));
 	game->n = rand() % (opt.max + 1 - opt.min) + opt.min;
@@ -28,7 +28,7 @@ void	ft_game(t_opt opt)
 	char		*str;
 	t_game		game;
 
-	ft_game_init(game);
+	ft_game_init(&game, opt);
 	ft_printf("GAME ON!\n");
 	while (!game.status)
 	{
