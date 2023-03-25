@@ -22,13 +22,3 @@ int	ft_digits_check(char *str)
 	}
 	return (-1);
 }
-
-int	ft_exit(char *str)
-{
-	if (!ft_strncmp("exit\n", str, 5))
-	{
-		free(str);
-		return (1);
-	}
-	return (0);
-}
