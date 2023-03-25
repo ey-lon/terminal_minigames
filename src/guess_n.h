@@ -3,6 +3,7 @@
 
 # include <unistd.h>
 # include <stdio.h>
+# include <time.h>
 # include "../Libft/libft.h"
 
 typedef struct s_opt
@@ -19,4 +20,5 @@ void	ft_set_range(int *max, int *min);
 void	ft_set_att_limit(int *n);
 //utils ----------------------------------
 int		ft_digits_check(char *str);
+
 #endif
