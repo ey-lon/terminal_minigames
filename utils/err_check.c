@@ -1,4 +1,4 @@
-#include "guess_n.h"
+#include "utils.h"
 
 int	ft_digits_check(char *str)
 {
@@ -59,4 +59,18 @@ int	ft_err_check(char *str)
 	if (ft_int_limit_check(str))
 		return (1);
 	return (0);
+}
+
+int	ft_arg_check(char *str, int size)
+{
+	int	check;
+
+	check = 0;
+	if (ft_err_check(str))
+		check = 2;
+	else if (ft_atoi(str) < 1)
+		check = 3;
+	else if (ft_atoi(str) > (size * size))
+		check = 4;
+	return (check);
 }

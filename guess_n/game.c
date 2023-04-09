@@ -1,21 +1,6 @@
 #include "guess_n.h"
 
-int	ft_status_update(int n, int nbr, int att)
-{
-	if (nbr == n)
-	{
-		ft_printf("Congrats! You Won in %d attempts.\n", att);
-		return (1);
-	}
-	else if (nbr > n)
-		ft_printf("The number to find is smaller\n");
-	else if (nbr < n)
-		ft_printf("The number to find is greater\n");
-	ft_printf("attempts = %d\n", att);
-	return (0);
-}
-
-void	ft_game_init(t_game *game, t_opt opt)
+static void	ft_gn_game_init(t_game *game, t_opt opt)
 {
 	srand(time(0));
 	game->n = rand() % (opt.max + 1 - opt.min) + opt.min;
@@ -23,13 +8,13 @@ void	ft_game_init(t_game *game, t_opt opt)
 	game->status = 0;
 }
 
-void	ft_game(t_opt opt)
+void	ft_gn_game(t_opt opt)
 {
 	char		*str;
 	t_game		game;
 
-	ft_game_init(&game, opt);
-	ft_rules(opt);
+	ft_gn_game_init(&game, opt);
+	ft_gn_rules(opt);
 	ft_printf("GAME ON!\n");
 	while (!game.status)
 	{
@@ -39,7 +24,7 @@ void	ft_game(t_opt opt)
 		else if (!ft_err_check(str))
 		{
 			game.att++;
-			game.status = ft_status_update(game.n, ft_atoi(str), game.att);
+			game.status = ft_gn_status_update(game.n, ft_atoi(str), game.att);
 		}
 		else
 			ft_printf("Invalid argument.\n");

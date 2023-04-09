@@ -1,6 +1,6 @@
 #include "guess_n.h"
 
-void	ft_rules(t_opt opt)
+void	ft_gn_rules(t_opt opt)
 {
 	ft_printf("-------------------------------------------------------------\n");
 	ft_printf("  RULES\n");

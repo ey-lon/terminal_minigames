@@ -1,15 +1,15 @@
 #include "guess_n.h"
 
-void	ft_attempts_header(void)
+void	ft_gn_attempts_header(void)
 {
 	ft_printf("------------------------------\n");
 	ft_printf("|  ATTEMPTS                  |\n");
 	ft_printf("|                            |\n");
-	ft_printf("|  type 'exit' to go back    |\n");
+	ft_printf("|  type 'q' to go back       |\n");
 	ft_printf("------------------------------\n");
 }
 
-void	ft_att_status(int *n)
+void	ft_gn_att_status(int *n)
 {
 	if (*n > 0)
 		ft_printf("ATTEMPTS = [%d]\n", *n);
@@ -20,18 +20,18 @@ void	ft_att_status(int *n)
 	}
 }
 
-void	ft_set_attempts(int *n)
+int	ft_gn_set_attempts(int *n)
 {
 	char	*str;
 	int		check;
 
-	ft_attempts_header();
+	ft_gn_attempts_header();
 	check = 0;
 	while (!check)
 	{
 		ft_printf("Insert the maximum number of attempts:\n");
 		str = get_next_line(0);
-		if (!ft_strncmp("exit\n", str, 5))
+		if (!ft_strncmp("q\n", str, 2))
 			check = -1;
 		else if (!ft_err_check(str))
 		{
@@ -43,5 +43,6 @@ void	ft_set_attempts(int *n)
 		if (str)
 			free(str);
 	}
-	ft_att_status(n);
+	ft_gn_att_status(n);
+	return (0);
 }

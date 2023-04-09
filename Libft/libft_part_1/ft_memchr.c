@@ -32,7 +32,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 #include <string.h>
 #include <stdio.h>
 
-int main()
+int	main()
 {
 	const char a[] = "ciao come va";
 	int c = 'o';
