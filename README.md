@@ -18,4 +18,7 @@ It contains:
 | command | description |
 | ------- | ----------- |
 | `make` | compile *terminal_games* |
-| `./terminal_games ` | launch the game |
+| `make clean` | remove tmp files |
+| `make fclean` | remove tmp files and executable |
+| `make re` | force recompile |
+| `./terminal_minigames ` | launch the game |
