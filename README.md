@@ -18,8 +18,4 @@ It contains:
 | command | description |
 | ------- | ----------- |
 | `make` | compile *terminal_games* |
-
-```shell
-./terminal_games
-```
-To launch the game.
+| `./terminal_games ` | launch the game |
