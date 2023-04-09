@@ -4,7 +4,7 @@
 This is a personal project where I try to code and put together different games that you can play on the command line.<br>
 It contains:
 
-# • GUESS THE NUMBER:
+# • GUESS THE NUMBER
 ### ABOUT THE GAME:
 A small game where you have to guess a random number between 1 and 100.
 ### OPTIONS:
