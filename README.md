@@ -1,17 +1,29 @@
 # Terminal MiniGames
 
-## ABOUT THE PROJECT:
-This is a personal project where I try to code and put together different games that you can play on the command line.
+### ABOUT THE PROJECT:
+This is a personal project where I try to code and put together different games that you can play on the command line.<br>
+It contains:
 
-## CONTAINS:
-
-### GUESS THE NUMBER:
-A small game where you have to guess a random number.
+# • GUESS THE NUMBER:
+### ABOUT THE GAME:
+A small game where you have to guess a random number between 1 and 100.
 ### OPTIONS:
-You can change the range and the limit of attempts in the menu.
+Customizable range.<br>
+Customizable number of attempts.
 
-## Usage
+# • TIC-TAC-TOE
+### ABOUT THE GAME:
+Tic-tac-toe is played on a 3 x 3 grid by two players, who alternately place the marks X and O in one of the 9 spaces in the grid.<br>
+The first player to get 9 of their marks in a row (vertically, horizontally or diagonally) is the winner.<br>
+When all the squares are full, the game is over.
+### OPTIONS:
+You can play against the CPU.<br>
+You can play against another PLAYER in shared-screen.
 
+Customizable grid size.<br>
+Customizable marks (X, O) colors.
+
+# HOW TO USE:
 | command | description |
 | ------- | ----------- |
 | `make` | compile *terminal_games* |
