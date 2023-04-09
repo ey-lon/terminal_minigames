@@ -1,7 +1,7 @@
 # guess_n
 A small game where you have to guess a random number.
 
-You can change the range and the number of attempts in the menu.
+You can change the range and the limit of attempts in the menu.
 
 ## Usage
 
