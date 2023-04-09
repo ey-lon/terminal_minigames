@@ -19,7 +19,7 @@ int main(void)
 	int		check;
 
 	check = 0;
-	while (1)
+	while (!check)
 	{
 		ft_terminal_games_header();
 		str = get_next_line(0);
