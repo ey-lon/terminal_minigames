@@ -11,7 +11,7 @@ It contains:
 
 |     | TIC-TAC-TOE |
 | --- | :---------- |
-| Description |Tic-tac-toe is played on a 3 x 3 grid by two players, who alternately place the marks X and O in one of the 9 spaces in the grid.<br>The first player to get 3 of their marks in a row (vertically, horizontally or diagonally) is the winner.<br>When all the squares are full, the game is over. |
+| Description |Tic-tac-toe is played on a 3 x 3 grid by two players.<br>The players alternately place the marks X and O in one of the 9 spaces in the grid.<br>The first player to get 3 of their marks in a row (vertically, horizontally or diagonally) wins. |
 | Options | You can play against the CPU.<br>You can play against another PLAYER in shared-screen.<br>Customizable grid size.<br>Customizable marks (X, O) colors. |
 
 # HOW TO USE:
