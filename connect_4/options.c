@@ -25,7 +25,7 @@ static void	ft_c4_options_header(void)
 		if (!ft_strncmp("q\n", str, 5))
 			check = -1;
 		else if (!ft_strncmp("1\n", str, 2))
-			ft_get_mat_size(&opt->grid_width, &opt->grid_width, GRID_MIN, GRID_MAX);
+			ft_get_mat_size(&opt->grid_width, &opt->grid_height, GRID_MIN, GRID_MAX);
 		//else if (!ft_strncmp("2\n", str, 2))
 		//	ft_c4_set_players_color(opt);
 		else
