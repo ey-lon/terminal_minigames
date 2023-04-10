@@ -74,9 +74,8 @@ static char	ft_c4_column_check(char **mat, int max_marks)
 
 //diagonal_1------------------------------------------------------------------
 
-static char	ft_c4_diag1_check(char **mat, int max_marks)
+static char	ft_c4_diag1_check(char **mat, int max_marks, int x)
 {
-	int		x;
 	int		y;
 	char	temp;
 	int		check;
@@ -85,7 +84,6 @@ static char	ft_c4_diag1_check(char **mat, int max_marks)
 		return (0);
 	check = 0;
 	y = 0;
-	x = 0;
 	while (mat[y] && mat[y][x])
 	{
 		if (!check)
@@ -143,23 +141,20 @@ char	ft_c4_call_diag1_check(char **mat, int max_marks)
 	int		x;
 	int		y;
 	char	temp;
-	char	**ptr;
 
 	if (!mat || !mat[0] || !mat[0][0])
 		return (0);
 	temp = 0;
 	y = ft_matlen(mat) - 1;
+	x = 0;
 	while (!temp && y > 0)
 	{
-		ptr = &((&mat[y])[0]);
-		temp = ft_c4_diag1_check(ptr, max_marks);
+		temp = ft_c4_diag1_check(&mat[y], max_marks, x);
 		y--;
 	}
-	x = 0;
 	while (!temp && mat[0][x])
 	{
-		ptr = &((&mat[0])[x]);
-		temp = ft_c4_diag1_check(ptr, max_marks);
+		temp = ft_c4_diag1_check(mat, max_marks, x);
 		x++;
 	}
 	return (temp);
@@ -170,7 +165,6 @@ char	ft_c4_call_diag2_check(char **mat, int max_marks)
 	int		x;
 	int		y;
 	char	temp;
-	char	**ptr;
 
 	if (!mat || !mat[0] || !mat[0][0])
 		return (0);
@@ -179,14 +173,12 @@ char	ft_c4_call_diag2_check(char **mat, int max_marks)
 	x = ft_strlen(mat[0]) - 1;
 	while (!temp && y > 0)
 	{
-		ptr = &((&mat[y])[0]);
-		temp = ft_c4_diag2_check(ptr, max_marks, x);
+		temp = ft_c4_diag2_check(&mat[y], max_marks, x);
 		y--;
 	}
 	while (!temp && x >= 0)
 	{
-		ptr = &((&mat[y])[0]);
-		temp = ft_c4_diag2_check(ptr, max_marks, x);
+		temp = ft_c4_diag2_check(mat, max_marks, x);
 		x--;
 	}
 	return (temp);

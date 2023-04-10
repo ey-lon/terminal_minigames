@@ -35,7 +35,7 @@ int	ft_get_limited_n(int *n, int min, int max)
 	check = 0;
 	while (!check)
 	{
-		ft_printf("Insert a number between %d and %d\n", min, max);
+		ft_printf("Insert a number between %d and %d:\n", min, max);
 		if (ft_get_n(&n_temp))
 			return (1);
 		else if (n_temp >= min && n_temp <= max)
