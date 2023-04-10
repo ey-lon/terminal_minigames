@@ -1,4 +1,4 @@
-#include "tictactoe.h"
+#include "connect_4.h"
 
 //CPU----------------------------------------------------------------------
 
@@ -20,29 +20,29 @@ static int	*ft_free_join(int *arr, int arr_size, int n)
 	return (new_arr);
 }
 
-int	ft_ttt_cpu_move(char **mat, int size)
+int	ft_c4_cpu_move(char **mat, int size)
 {
-	int		square;
+	int		column;
 	int		*arr;
 	int		arr_size;
 
 	arr = NULL;
 	arr_size = 0;
-	square = 1;
-	while (square < size)
+	column = 1;
+	while (column < size)
 	{
-		if (ft_search_char_at_pos_n(mat, FREE, square))
+		if (ft_search_char_in_column_n(mat, FREE, column))
 		{
-			arr = ft_free_join(arr, arr_size, square);
+			arr = ft_free_join(arr, arr_size, column);
 			arr_size++;
 		}
-		square++;
+		column++;
 	}
 	if (arr_size)
 	{
-		square = arr[rand() % ((arr_size - 1) + 1)];
-		ft_printf("%d\n", square);
-		ft_ttt_move(mat, square, CPU);
+		column = arr[rand() % ((arr_size - 1) + 1)];
+		ft_printf("%d\n", column);
+		ft_c4_move(mat, column, CPU);
 	}
 	else
 		ft_printf("No move available\n");

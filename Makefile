@@ -25,9 +25,10 @@ NAME = terminal_minigames
 
 LIBFT_F = Libft/
 MAIN_F = main_src/
+UTS_F = utils/
 TTT_F = tictactoe/
 GSN_F = guess_n/
-UTS_F = utils/
+CN4_F = connect_4/
 
 #libft-----------------------------------------
 
@@ -43,8 +44,6 @@ GSN = main.c \
 	game.c \
 	rules.c \
 	options.c \
-	set_range.c \
-	set_att_limit.c \
 	status_update.c
 
 #tictactoe-------------------------------------
@@ -55,30 +54,44 @@ TTT = main.c \
 	cpu.c \
 	rules.c \
 	options.c \
-	set_grid_size.c \
 	set_players_color.c \
 	status_update.c \
 	win_check.c \
-	print_mat_ttt.c
+	print_mat.c
+
+#connect_4-------------------------------------
+
+CN4 = main.c \
+	game.c \
+	move.c \
+	cpu.c \
+	rules.c \
+	options.c \
+	status_update.c \
+	win_check.c \
+	print_mat.c
 
 #utils-----------------------------------------
 
 UTS = err_check.c \
-	mat_chars.c \
 	mat_functions.c \
+	mat_chars.c \
 	get_n.c \
-	get_min_max.c \
+	get_range.c \
+	get_mat_size.c \
+	get_att_limit.c \
 	get_color.c
 
 #prefix----------------------------------------
 
 LIBFT := $(addprefix $(LIBFT_F),$(LIBFT))
 MAIN := $(addprefix $(MAIN_F),$(MAIN))
+UTS := $(addprefix $(UTS_F),$(UTS))
 GSN := $(addprefix $(GSN_F),$(GSN))
 TTT := $(addprefix $(TTT_F),$(TTT))
-UTS := $(addprefix $(UTS_F),$(UTS))
+CN4 := $(addprefix $(CN4_F),$(CN4))
 
-SRC = $(MAIN) $(GSN) $(TTT) $(UTS)
+SRC = $(UTS) $(MAIN) $(GSN) $(TTT) $(CN4)
 
 #rules-----------------------------------------
 

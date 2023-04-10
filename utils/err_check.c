@@ -61,16 +61,16 @@ int	ft_err_check(char *str)
 	return (0);
 }
 
-int	ft_arg_check(char *str, int size)
+int	ft_arg_check(char *str, int min, int max)
 {
 	int	check;
 
 	check = 0;
 	if (ft_err_check(str))
 		check = 2;
-	else if (ft_atoi(str) < 1)
+	else if (ft_atoi(str) < min)
 		check = 3;
-	else if (ft_atoi(str) > (size * size))
+	else if (ft_atoi(str) > max)
 		check = 4;
 	return (check);
 }

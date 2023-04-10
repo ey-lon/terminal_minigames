@@ -1,11 +1,26 @@
 #include "tictactoe.h"
 
-void	ft_print_mat_ttt(char **mat, t_opt *opt)
+static void ft_ttt_print_line(char *str)
+{
+	int x;
+	int len;
+
+	x = 0;
+	len = ft_strlen(str);
+	while (x < len)
+	{
+		if (x > 0 && x < len)
+			ft_printf("+");
+		ft_printf("---");
+		x++;
+	}
+	ft_printf("\n\t");
+}
+
+void	ft_ttt_print_mat(char **mat, t_opt *opt)
 {
 	int	x;
 	int	y;
-	int	i;
-	int	len;
 	int	square;
 
 	if (!mat || !mat[0])
@@ -16,18 +31,7 @@ void	ft_print_mat_ttt(char **mat, t_opt *opt)
 	{
 		ft_printf("\n\t");
 		if (y > 0)
-		{
-			i = 0;
-			len = ft_strlen(mat[y]);
-			while (i < len)
-			{
-				if (i > 0 && i < len)
-					ft_printf("+");
-				ft_printf("---");
-				i++;
-			}
-			ft_printf("\n\t");
-		}
+			ft_ttt_print_line(mat[y]);
 		x = 0;
 		while (mat[y][x])
 		{

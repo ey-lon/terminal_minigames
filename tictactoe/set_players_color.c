@@ -2,7 +2,7 @@
 
 //-------------------------------------------------------
 
-static void	ft_set_players_color_header(void)
+static void	ft_ttt_set_players_color_header(void)
 {
 	ft_printf("------------------------------\n");
 	ft_printf("|  COLOR                     |\n");
@@ -14,7 +14,7 @@ static void	ft_set_players_color_header(void)
 	ft_printf("------------------------------\n");
 }
 
-void	ft_set_players_color(t_opt *opt)
+void	ft_ttt_set_players_color(t_opt *opt)
 {
 	char	*str;
 	int		check;
@@ -22,7 +22,7 @@ void	ft_set_players_color(t_opt *opt)
 	check = 0;
 	while (!check)
 	{
-		ft_set_players_color_header();
+		ft_ttt_set_players_color_header();
 		str = get_next_line(0);
 		if (!ft_strncmp("q\n", str, 2))
 			check = -1;

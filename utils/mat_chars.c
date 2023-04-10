@@ -1,6 +1,6 @@
 #include "utils.h"
 
-char	ft_char_at_pos_n(char **mat, int n)
+int	ft_search_char_at_pos_n(char **mat, char c, int n)
 {
 	int	y;
 	int	x;
@@ -8,14 +8,18 @@ char	ft_char_at_pos_n(char **mat, int n)
 	if (!mat || n < 1)
 		return (0);
 	y = 0;
-	while (mat[y])
+	while (mat[y] && n > 0)
 	{
 		x = 0;
-		while (mat[y][x])
+		while (mat[y][x] && n > 0)
 		{
 			n--;
 			if (!n)
-				return (mat[y][x]);
+			{
+				if (mat[y][x] == c)
+					return (1);
+				return (0);
+			}
 			x++;
 		}
 		y++;
@@ -23,13 +27,13 @@ char	ft_char_at_pos_n(char **mat, int n)
 	return (0);
 }
 
-void	ft_set_char_at_pos_n(char **mat, int n, char c)
+int	ft_set_char_at_pos_n(char **mat, char c, int n)
 {
 	int	y;
 	int	x;
 
 	if (!mat || n < 1)
-		return ;
+		return (1);
 	y = 0;
 	while (mat[y])
 	{
@@ -40,49 +44,54 @@ void	ft_set_char_at_pos_n(char **mat, int n, char c)
 			if (!n)
 			{
 				mat[y][x] = c;
-				return ;
+				return (0);
 			}
 			x++;
 		}
 		y++;
 	}
+	return (1);
 }
 
-void	ft_print_mat(char **mat)
+int	ft_search_char_in_column_n(char **mat, char c, int n)
 {
-	int	x;
 	int	y;
-	int	i;
-	int	len;
+	int	x;
+	int len;
 
-	if (!mat || !mat[0])
-		return ;
+	len = ft_strlen(mat[0]);
+	if (!mat || n < 1 || n - 1 > len)
+		return (0);
+	x = n - 1;
 	y = 0;
 	while (mat[y])
 	{
-		ft_printf("\n\t");
-		if (y > 0)
+		if (mat[y][x] == c)
+				return (1);
+		y++;
+	}
+	return (0);
+}
+
+int	ft_put_char_in_column_n_at_last_pos(char **mat, char c, int n, char pos)
+{
+	int	y;
+	int	x;
+	int len;
+
+	len = ft_strlen(mat[0]);
+	if (!mat || n < 1 || n - 1 > len)
+		return (1);
+	y = 0;
+	x = n - 1;
+	while (mat[y])
+	{
+		if (mat[y][x] == pos && (!mat[y + 1] || mat[y + 1][x] != pos))
 		{
-			i = 0;
-			len = ft_strlen(mat[y]);
-			while (i < len)
-			{
-				if (i > 0 && i < len)
-					ft_printf("+");
-				ft_printf("---");
-				i++;
-			}
-			ft_printf("\n\t");
-		}
-		x = 0;
-		while (mat[y][x])
-		{
-			if (x > 0)
-				ft_printf(" |");
-			ft_printf(" %c", mat[y][x]);
-			x++;
+			mat[y][x] = c;
+			return (0);
 		}
 		y++;
 	}
-	ft_printf("\n\n");
+	return (1);
 }

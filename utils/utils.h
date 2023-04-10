@@ -17,18 +17,25 @@
 
 //err_check-----------------------------
 int		ft_err_check(char *str);
+int		ft_arg_check(char *str, int min, int max);
 //get_data_from_stdin-------------------
 int		ft_get_n(int *n);
-int		ft_get_min_max(int *max, int *min);
+int		ft_get_limited_n(int *n, int min, int max);
+int		ft_get_attempts(int *n);
+int		ft_get_range(int *min, int *max);
+int		ft_get_mat_size(int *x, int *y, int min, int max);
+int		ft_get_square_mat_size(int *n, int min, int max);
 int		ft_get_color(char **color);
 //mat_fts---------------------------------
 int		ft_matlen(char **mat);
 void	ft_free_mat(char **mat);
-char	**ft_mat_create(int max_y, int max_x);
-void	ft_mat_fill(char **mat, int max_y, int max_x, char c);
+char	**ft_mat_create(int max_x, int max_y);
+void	ft_mat_fill(char **mat, int max_x, int max_y, char c);
 //mat_chars-------------------------------
-char	ft_char_at_pos_n(char **mat, int n);
-void	ft_set_char_at_pos_n(char **mat, int n, char c);
+int		ft_search_char_at_pos_n(char **mat, char c, int n);
+int		ft_set_char_at_pos_n(char **mat, char c, int n);
+int		ft_search_char_in_column_n(char **mat, char c, int n);
+int		ft_put_char_in_column_n_at_last_pos(char **mat, char c, int n, char pos);
 void	ft_print_mat(char **mat);
 
 #endif

@@ -25,9 +25,9 @@ void	ft_gn_options(t_opt *opt)
 		if (!ft_strncmp("q\n", str, 2))
 			check = -1;
 		else if (!ft_strncmp("1\n", str, 2))
-			ft_gn_set_range(&(opt->max), &(opt->min));
+			ft_get_range(&(opt->min), &(opt->max));
 		else if (!ft_strncmp("2\n", str, 2))
-			ft_gn_set_attempts(&(opt->att_lmt));
+			ft_get_attempts(&(opt->att_lmt));
 		else
 			ft_printf("Unknown command.\n");
 		if (str)

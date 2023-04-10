@@ -2,7 +2,7 @@
 
 //rows------------------------------------------------------------------------
 
-static char	ft_row_check(char **mat)
+static char	ft_ttt_row_check(char **mat)
 {
 	int		x;
 	int		y;
@@ -32,7 +32,7 @@ static char	ft_row_check(char **mat)
 
 //columns---------------------------------------------------------------------
 
-static char	ft_column_check(char **mat)
+static char	ft_ttt_column_check(char **mat)
 {
 	int		x;
 	int		y;
@@ -62,7 +62,7 @@ static char	ft_column_check(char **mat)
 
 //diagonal_1------------------------------------------------------------------
 
-static char	ft_diag1_check(char **mat)
+static char	ft_ttt_diag1_check(char **mat)
 {
 	int		x;
 	int		y;
@@ -89,7 +89,7 @@ static char	ft_diag1_check(char **mat)
 
 //diagonal_2------------------------------------------------------------------
 
-static char	ft_diag2_check(char **mat)
+static char	ft_ttt_diag2_check(char **mat)
 {
 	int		x;
 	int		y;
@@ -116,26 +116,26 @@ static char	ft_diag2_check(char **mat)
 
 //win_check------------------------------------------------------------------
 
-char	ft_win_check(char **mat)
+char	ft_ttt_win_check(char **mat)
 {
 	char	temp;
 
 	if (!mat || !mat[0] || !mat[0][0])
 		return (0);
 	//rows------------------------------------------------------------------------
-	temp = ft_row_check(mat);
+	temp = ft_ttt_row_check(mat);
 	if (temp)
 		return (temp);
 	//columns---------------------------------------------------------------------
-	temp = ft_column_check(mat);
+	temp = ft_ttt_column_check(mat);
 	if (temp)
 		return (temp);
 	//diagonal_1------------------------------------------------------------------
-	temp = ft_diag1_check(mat);
+	temp = ft_ttt_diag1_check(mat);
 	if (temp)
 		return (temp);
 	//diagonal_2------------------------------------------------------------------
-	temp = ft_diag2_check(mat);
+	temp = ft_ttt_diag2_check(mat);
 	if (temp)
 		return (temp);
 	return (0);

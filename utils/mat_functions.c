@@ -29,7 +29,7 @@ void	ft_free_mat(char **mat)
 	}
 }
 
-char	**ft_mat_create(int max_y, int max_x)
+char	**ft_mat_create(int max_x, int max_y)
 {
 	char	**mat;
 	int		y;
@@ -46,7 +46,7 @@ char	**ft_mat_create(int max_y, int max_x)
 	return (mat);
 }
 
-void	ft_mat_fill(char **mat, int max_y, int max_x, char c)
+void	ft_mat_fill(char **mat, int max_x, int max_y, char c)
 {
 	int		y;
 	int		x;

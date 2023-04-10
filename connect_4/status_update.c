@@ -1,6 +1,6 @@
-#include "tictactoe.h"
+#include "connect_4.h"
 
-static void	ft_ttt_move_update( int player_who_moved)
+static void	ft_c4_move_update( int player_who_moved)
 {
 	if (player_who_moved == P1)
 		ft_printf("Player 1 chose:\n");
@@ -12,9 +12,9 @@ static void	ft_ttt_move_update( int player_who_moved)
 
 //---------------------------------------------------------------------------------
 
-static int	ft_ttt_win_update(t_game *game, char winner)
+static int	ft_c4_win_update(t_game *game, char winner)
 {
-	if (!winner && ++game->turn < game->opt->size * game->opt->size)
+	if (!winner && ++game->turn < game->opt->grid_width * game->opt->grid_height)
 		return (0);
 	else if (!winner)
 		return (ft_printf("It'a tie!\n") * 0 + 4);
@@ -29,12 +29,12 @@ static int	ft_ttt_win_update(t_game *game, char winner)
 
 //---------------------------------------------------------------------------------
 
-int	ft_ttt_status_update(t_game *game, int player_who_moved)
+int	ft_c4_status_update(t_game *game, int player_who_moved)
 {
 	int	status;
 
-	ft_ttt_move_update(player_who_moved);
-	ft_ttt_print_mat(game->mat, game->opt);
-	status = ft_ttt_win_update(game, ft_ttt_win_check(game->mat));
+	ft_c4_move_update(player_who_moved);
+	ft_c4_print_mat(game->mat, game->opt);
+	status = ft_c4_win_update(game, ft_c4_win_check(game->mat, game->opt->max_marks));
 	return (status);
 }
