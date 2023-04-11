@@ -93,7 +93,11 @@ static char	ft_c4_diag1_check(char **mat, int max_marks, int x)
 			if (mat[y][x] == temp)
 				check++;
 			else
+			{
 				check = 0;
+				x--;
+				y--;
+			}
 			if (check == max_marks)
 				return (temp);
 		}
@@ -124,7 +128,11 @@ static char	ft_c4_diag2_check(char **mat, int max_marks, int x)
 			if (mat[y][x] == temp)
 				check++;
 			else
+			{
 				check = 0;
+				x--;
+				y--;
+			}
 			if (check == max_marks)
 				return (temp);
 		}
