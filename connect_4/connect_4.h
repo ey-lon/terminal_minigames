@@ -16,7 +16,7 @@
 
 //GRID_LIMITS---------------------------
 # define GRID_MIN 1
-# define GRID_MAX 25
+# define GRID_MAX 50
 
 typedef struct s_opt
 {

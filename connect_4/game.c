@@ -68,9 +68,9 @@ int	ft_c4_pvp(t_opt opt)
 {
 	t_game	game;
 	char	*str;
-	char		player;
+	char	player;
 
-	ft_c4_game_init(&game, &opt, P2);
+	ft_c4_game_init(&game, &opt, 0);
 	player = P1;
 	ft_printf("Player %c turn!\n", player);
 	while (!game.status)

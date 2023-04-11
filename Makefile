@@ -54,7 +54,6 @@ TTT = main.c \
 	cpu.c \
 	rules.c \
 	options.c \
-	set_players_color.c \
 	status_update.c \
 	win_check.c \
 	print_mat.c
@@ -80,7 +79,8 @@ UTS = err_check.c \
 	get_range.c \
 	get_mat_size.c \
 	get_att_limit.c \
-	get_color.c
+	get_players_color.c \
+	get_color.c \
 
 #prefix----------------------------------------
 

@@ -1,11 +1,11 @@
 #include "connect_4.h"
 
-static void	ft_c4_move_update(int player_who_moved, int cpu)
+static void	ft_c4_move_update(int player, int cpu)
 {
-	if (cpu && player_who_moved != P1)
+	if (cpu && player != P1)
 		ft_printf("The Computer chose:\n");
 	else
-		ft_printf("Player %d chose:\n", player_who_moved);
+		ft_printf("Player %c chose:\n", player);
 }
 
 //---------------------------------------------------------------------------------
@@ -19,7 +19,7 @@ static int	ft_c4_win_update(t_game *game, char winner)
 	if (game->cpu && winner != P1)
 		return (ft_printf("CPU wins!\n") * 0 + CPU);
 	else
-		return (ft_printf("Player %d wins!\n", winner) * 0 + winner);
+		return (ft_printf("Player %c wins!\n", winner) * 0 + winner);
 	return (0);
 }
 

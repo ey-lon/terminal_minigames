@@ -25,6 +25,7 @@ int		ft_get_attempts(int *n);
 int		ft_get_range(int *min, int *max);
 int		ft_get_mat_size(int *x, int *y, int min, int max);
 int		ft_get_square_mat_size(int *n, int min, int max);
+void	ft_get_players_color(char **s1, char **s2);
 int		ft_get_color(char **color);
 //mat_fts---------------------------------
 int		ft_matlen(char **mat);

@@ -50,7 +50,6 @@ int		ft_ttt_pve(t_opt opt);
 void	ft_ttt_rules(t_opt opt);
 //OPTIONS---------------------------------
 void	ft_ttt_options(t_opt *opt);
-void	ft_ttt_set_players_color(t_opt *opt);
 //movement--------------------------------
 int		ft_ttt_move(char **mat, int square, int player_who_moved);
 //CPU-------------------------------------

@@ -27,7 +27,7 @@ static void	ft_ttt_options_header(void)
 		else if (!ft_strncmp("1\n", str, 2))
 			ft_get_square_mat_size(&opt->size, GRID_MIN, GRID_MAX);
 		else if (!ft_strncmp("2\n", str, 2))
-			ft_ttt_set_players_color(opt);
+			ft_get_players_color(&opt->p1_col, &opt->p2_col);
 		else
 			ft_printf("Unknown command.\n");
 		if (str)
