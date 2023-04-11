@@ -24,7 +24,7 @@ NAME = terminal_minigames
 #paths-----------------------------------------
 
 LIBFT_F = Libft/
-MAIN_F = main_src/
+MAIN_F = main/
 UTS_F = utils/
 TTT_F = tictactoe/
 GSN_F = guess_n/
