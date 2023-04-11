@@ -25,11 +25,11 @@ int	ft_get_mat_size(int *x, int *y, int min, int max)
 	int		x_temp;
 
 	check = 0;
-	//ft_get_mat_size_header();
-	ft_printf("Insert the WIDTH(x)\n");
+	ft_get_mat_size_header();
+	ft_printf("Insert the WIDTH (x):\n");
 	if (!ft_get_limited_n(&x_temp, min, max))
 	{
-		ft_printf("Insert the HEIGHT(y)\n");
+		ft_printf("Insert the HEIGHT (y):\n");
 		if (!ft_get_limited_n(&y_temp, min, max))
 			check = 1;
 	}
