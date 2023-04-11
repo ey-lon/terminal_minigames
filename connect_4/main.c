@@ -20,8 +20,12 @@ static void ft_c4_opt_init(t_opt *opt)
 	opt->max_marks = 4;
 	opt->grid_width = 7;
 	opt->grid_height = 6;
-	opt->p1_col = BLUE;
-	opt->p2_col = RED;
+	opt->p_col[0] = NOCOL;
+	opt->p_col[1] = BLUE;
+	opt->p_col[2] = RED;
+	opt->p_symbol[0] = ' ';
+	opt->p_symbol[1] = 'O';
+	opt->p_symbol[2] = 'O';
 }
 
 int	ft_connect_4(void)

@@ -41,6 +41,7 @@ void	ft_c4_print_mat(char **mat, t_opt *opt)
 	int	y;
 	int len;
 
+	(void)opt;
 	if (!mat || !mat[0])
 		return ;
 	len = ft_strlen(mat[0]);
@@ -57,12 +58,12 @@ void	ft_c4_print_mat(char **mat, t_opt *opt)
 		while (mat[y][x])
 		{
 			ft_printf("|");
-			if (mat[y][x] == P1C)
-				ft_printf("%s %c %s", opt->p1_col, mat[y][x], NOCOL);
-			else if (mat[y][x] != FREE)
-				ft_printf("%s %c %s", opt->p2_col, mat[y][x], NOCOL);
-			else
+			if (mat[y][x] == FREE)
 				ft_printf("   ");
+			else if (mat[y][x] == P1)
+				ft_printf("%s %c %s", opt->p_col[1], opt->p_symbol[1], NOCOL);
+			else
+				ft_printf("%s %c %s", opt->p_col[2], opt->p_symbol[2], NOCOL);
 			x++;
 		}
 		ft_printf("|\n");

@@ -10,12 +10,12 @@ static int	ft_c4_header(void)
 	return (0);
 }
 
-static void	ft_c4_game_init(t_game *game, t_opt *opt, int player2)
+static void	ft_c4_game_init(t_game *game, t_opt *opt, int cpu_status)
 {
 	game->opt = opt;
 	game->turn = 0;
 	game->status = 0;
-	game->player2 = player2;
+	game->cpu = cpu_status;
 	game->mat = ft_mat_create(opt->grid_width, opt->grid_height);
 	ft_mat_fill(game->mat, opt->grid_width, opt->grid_height, FREE);
 	ft_c4_print_mat(game->mat, game->opt);
@@ -31,7 +31,7 @@ int	ft_c4_pve(t_opt opt)
 	char	*str;
 
 	srand(time(0));
-	ft_c4_game_init(&game, &opt, CPU);
+	ft_c4_game_init(&game, &opt, 1);
 	ft_printf("Player 1 turn!\n");
 	while (!game.status)
 	{
@@ -68,11 +68,11 @@ int	ft_c4_pvp(t_opt opt)
 {
 	t_game	game;
 	char	*str;
-	int		player;
+	char		player;
 
 	ft_c4_game_init(&game, &opt, P2);
 	player = P1;
-	ft_printf("Player %d turn!\n", player);
+	ft_printf("Player %c turn!\n", player);
 	while (!game.status)
 	{
 		str = get_next_line(0);
@@ -89,7 +89,7 @@ int	ft_c4_pvp(t_opt opt)
 						player = P2;
 					else
 						player = P1;
-					ft_printf("Player %d turn!\n", player);
+					ft_printf("Player %c turn!\n", player);
 				}
 			}
 		}

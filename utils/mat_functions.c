@@ -39,10 +39,8 @@ char	**ft_mat_create(int max_x, int max_y)
 	while (y < max_y)
 	{
 		mat[y] = malloc(sizeof(char) * max_x + 1);
-		mat[y][max_x] = '\0';
 		y++;
 	}
-	mat[y] = NULL;
 	return (mat);
 }
 
@@ -60,6 +58,8 @@ void	ft_mat_fill(char **mat, int max_x, int max_y, char c)
 			mat[y][x] = c;
 			x++;
 		}
+		mat[y][x] = '\0';
 		y++;
 	}
+	mat[y] = NULL;
 }
