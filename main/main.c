@@ -18,7 +18,7 @@ int main(void)
 {
 	char	*str;
 	int		check;
-
+	
 	check = 0;
 	while (!check)
 	{
