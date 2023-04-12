@@ -136,7 +136,7 @@ static char	ft_c4_diag2_check(char **mat, int max_marks, int x)
 			else
 			{
 				check = 0;
-				x--;
+				x++;
 				y--;
 			}
 			if (check == max_marks)
