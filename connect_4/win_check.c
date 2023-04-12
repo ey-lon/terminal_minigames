@@ -25,7 +25,10 @@ static char	ft_c4_row_check(char **mat, int max_marks)
 				if (mat[y][x] == temp)
 					check++;
 				else
+				{
 					check = 0;
+					x--;
+				}
 				if (check == max_marks)
 					return (temp);
 			}
@@ -61,7 +64,10 @@ static char	ft_c4_column_check(char **mat, int max_marks)
 				if (mat[y][x] == temp)
 					check++;
 				else
+				{
 					check = 0;
+					y--;
+				}
 				if (check == max_marks)
 					return (temp);
 			}
