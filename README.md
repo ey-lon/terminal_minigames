@@ -16,7 +16,7 @@ It contains:
 
 |     | CONNECT 4 |
 | --- | :---------- |
-| Description | Connect 4 is played on a 7 x 6 grid by two players.<br>The players alternately place the marks X and O in one of the 7 columns in the grid.<br>The first player to get 4 of their marks in a row (vertically, horizontally or diagonally) wins. |
+| Description | Connect 4 is played on a 7 x 6 grid by two players.<br>The players alternately place a red O and a blue O in one of the 7 columns in the grid.<br>The first player to get 4 of their marks in a row (vertically, horizontally or diagonally) wins. |
 | Options | - You can play against the CPU.<br>- You can play against another PLAYER in shared-screen.<br>- Customizable grid size. |
 
 # HOW TO USE:
