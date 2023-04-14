@@ -1,5 +1,5 @@
-#ifndef TERMINAL_GAMES_H
-# define TERMINAL_GAMES_H
+#ifndef TERMINAL_MINIGAMES_H
+# define TERMINAL_MINIGAMES_H
 
 # include "../utils/utils.h"
 # include "../Libft/libft.h"

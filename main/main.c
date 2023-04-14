@@ -1,9 +1,9 @@
-#include "terminal_games.h"
+#include "terminal_minigames.h"
 
-void	ft_terminal_games_header(void)
+void	ft_terminal_minigames_header(void)
 {
 	ft_printf("------------------------------\n");
-	ft_printf("|  Terminal Games            |\n");
+	ft_printf("|  Terminal MiniGames        |\n");
 	ft_printf("|                            |\n");
 	ft_printf("|  1. GUESS THE NUMBER       |\n");
 	ft_printf("|  2. TIC-TAC-TOE            |\n");
@@ -22,7 +22,7 @@ int main(void)
 	check = 0;
 	while (!check)
 	{
-		ft_terminal_games_header();
+		ft_terminal_minigames_header();
 		str = get_next_line(0);
 		//if (!ft_strncmp("0\n", str, 2))
 		//	ft_info();
