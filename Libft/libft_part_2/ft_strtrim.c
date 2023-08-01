@@ -33,7 +33,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	else
 	{
 		p = malloc(sizeof(char));
-		p = 0;
+		*p = 0;
 	}
 	return (p);
 }
