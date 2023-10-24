@@ -124,6 +124,6 @@ fclean:   	libfclean
 
 re: fclean all
 
-.PHONY: $(NAME) all re clean fclean
+.PHONY: all re clean fclean
 
 .SILENT:
