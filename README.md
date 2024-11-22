@@ -1,7 +1,7 @@
 # Terminal MiniGames
 
 ### ABOUT THE PROJECT:
-This is a personal project where I try to code and put together different games that you can play on the command line.<br>
+This is a personal project where I tried to code a few minigames that you can play on the command line.<br>
 It contains:
 
 |     | GUESS THE NUMBER |
